@@ -154,7 +154,7 @@
         ijmuiden:{
             title: "IJmuiden"
         },
-        hooddorp:{
+        hoofddorp:{
             title: "Hoofddorp"
         },
         hilversum: {
@@ -165,7 +165,11 @@
         },
         beverwijk: {
             title: "Beverwijk"
-        }
+        },
+        krommenie: {
+          title: "Krommenie"
+        },
+        
 
 
         
