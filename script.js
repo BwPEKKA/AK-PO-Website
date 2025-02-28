@@ -100,6 +100,75 @@
           text: "Historic city known for its art museums and medieval architecture.",
           image: "https://via.placeholder.com/150",
         },
+        denhelder: {
+            title: "Den Helder",
+        },
+        julianadorp: {
+            title: "Julianadorp"
+        },
+        alkmaar:{
+            title: "Alkmaar"
+        },
+        medemblik:{
+            title: "Medemblik"
+        },
+        andijk: {
+            title: "Andijk"
+        },
+        enkhuizen: {
+            title: "Enkhuizen"
+        },
+        middenmeer:{
+            title: "Middenmeer"
+        },
+        heerhugowaard: {
+            title: "Heerhugowaard"
+        },
+        hoorn: {
+            title: "Hoorn"
+        },
+        schoorl:{
+            title: "Schoorl"            
+        },
+        bergen:{
+            title:"Bergen"
+        },
+        heiloo:{
+            title: "Heiloo"
+        },
+        schagen: {
+            title: "Schagen"
+        },
+        opmeer: {
+            title: "Opmeer"
+        },
+        egmond: {
+            title: "Egmond"
+        },
+        purmerend:{
+            title: "Purmerend"
+        },
+        volendam:{
+            title: "Volendam"
+        },
+        ijmuiden:{
+            title: "IJmuiden"
+        },
+        hooddorp:{
+            title: "Hoofddorp"
+        },
+        hilversum: {
+            title: "Hilversum"
+        },
+        zandvoort: {
+            title: "Zandvoort"
+        },
+        beverwijk: {
+            title: "Beverwijk"
+        }
+
+
+        
       };
 
       
