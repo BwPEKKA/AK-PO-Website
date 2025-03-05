@@ -1,10 +1,10 @@
 html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Proxima Nova';
 
 }
 
 body {
-  font-family: Arial, 'Courier New', Courier, monospace;
+  font-family:'Proxima Nova';
   background-color: #181c25;
   margin: 0;
   padding: 0;
@@ -74,6 +74,19 @@ svg {
     width: 15%;
     height: 90vh;
     border-radius: 8px;
+
+}
+
+.infodrp {
+  position: auto;
+  margin: auto;
+  background-color: #a4afc6;
+  padding:10px;
+  width:90%;
+  height:6%;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)
 }
 
 .dropdown {
@@ -109,6 +122,7 @@ svg {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-radius: 8px;
+  transition: 600ms ease;
 }
 
 /* Links inside the dropdown */
@@ -118,10 +132,14 @@ svg {
   text-decoration: none;
   display: block;
   border-radius: 8px;
+  transition: 500ms ease;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgb(219, 228, 236)}
+.dropdown-content a:hover {
+  background-color: rgb(219, 228, 236) 
+
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -130,5 +148,6 @@ svg {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #c0d0e4;
+  background-color: #c0d0e4;  
 }
+
