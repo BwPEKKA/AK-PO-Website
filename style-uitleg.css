@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+  
+html {
+      font-family: 'Proxima Nova';
+  
+}
+  
+body {
+    font-family:'Proxima Nova';
+    background-color: #181c25;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cont-uitleg {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Fixed width for nav, rest for content */
+    grid-template-rows: 80px 1fr; /* Home takes 80px height, rest for content */
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Home stays at the top */
+.home {
+    background-color: rgb(123, 154, 181);
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* Nav-bar stays directly below Home */
+.nav-bar {
+    background-color: rgb(123, 154, 181);
+    border-radius: 5px;
+    width: 150px; /* Fixed width */
+    height: calc(100vh - 120px); /* Full height minus padding and home */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    position: sticky;
+    top: 100px; /* Ensures it stays below home */
+    gap: 10px;
+}
+
+/* Main content area for uitleg-text */
+.uitleg-text {
+    display: flex;
+    flex-direction: column; /* Stack columns vertically */
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+/* Individual column styling */
+.column {
+    background-color: #f2f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title styling */
+.column-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgb(123, 154, 181);
+    padding-bottom: 5px;
+}
+
+/* Text styling */
+.column-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.nav-tab {
+    position: relative;
+    background-color: #b3c0ce;
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+    text-align: center;
+}
+
+
+
+

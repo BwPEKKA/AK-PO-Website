@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 html {
     font-family: 'Proxima Nova';
 
@@ -13,15 +20,24 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+.cont {
+  display: grid;
+  grid-template-columns: 300px 1fr ;
+  gap: 30px;
+  height: 90vh;
+  width: 100%;
+  padding: 25px;
+}
+
 .map-container {
   position: relative;
-  width: 80%;
-  height: 90vh;
+  width: 100%;
+  height: 100%;
   background: #8accfb;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 12px;
-  left: 7%;
 }
 svg {
   width: 100%;
@@ -67,27 +83,32 @@ svg {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
-.info {
-    position:absolute;
-    left: 15px;
-    background-color: #f2f8ff;
-    width: 15%;
-    height: 90vh;
-    border-radius: 8px;
 
+
+.map-container img {
+  position: absolute;
 }
 
-.infodrp {
-  position: auto;
-  margin: auto;
-  background-color: #a4afc6;
-  padding:10px;
-  width:90%;
-  height:6%;
-  margin-top: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2)
+.map-container {
+  position: relative;
 }
+/* 10px od góry, -50px od prawej - musisz określić szerokość(width) */
+.map-container img {
+  position: absolute;
+  width: 400px;
+  top: 10px;
+  right: -50px;
+}
+
+/* zdjęcie na środku */
+.map-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 .dropdown {
   position:absolute;
@@ -151,3 +172,45 @@ svg {
   background-color: #c0d0e4;  
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f2f8ff;
+  border-radius: 12px;
+  gap: 10px;
+
+}
+
+.tab {
+  position: relative;
+  background-color: #b3c0ce;
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  text-align: center;
+}
+
+.tab .content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 0px;
+  right: -230px;
+  z-index: 1000;
+  border-radius: 8px;
+  background-color:#f2f8ff;
+  padding: 25px;
+}
+
+.tab:hover .content {
+  display: flex;
+}
+
+.tab .content img {
+  width: 100%;
+}

@@ -71,8 +71,8 @@
                 <p>${data.text}</p>
                 <img src="${data.image}" alt="${data.title}" style="width:100%; border-radius:8px;">
               `;
-              popup.style.left = `${event.clientX + 10}px`;
-              popup.style.top = `${event.clientY + 10}px`;
+              popup.style.left = `${event.clientX + 1}px`;
+              popup.style.top = `${event.clientY + 1}px`;
               popup.style.display = "block";
             } else {
               popup.style.display = "none";

@@ -7,50 +7,59 @@
     <link rel="stylesheet" href="style.css">
 
   <body>
-    <div class="map-container">
-      <!-- Popup -->
-      <div id="popup" class="popup"></div>
-
-      <!-- Legend -->
-      <div class="legend">
-        <strong>Legend</strong>
-        <p style="color: #626082">● Main Roads</p>
-        <p style="color: #cc9466">● Haarlem</p>
+    <div class="cont">
+      <div class="sidebar">
+        <div class="tab">
+          <div class="content"><img src="wdop.PNG" /> <p> test test test</p> </div>
+        </div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
       </div>
 
-      <div id="svg-container"></div>
 
-      <div class ="year">
-        <strong>Current year of the map</strong>
-        <p style="color: black;">Year 2050</p>
+
+      <div class="map-container">
+        <!-- Popup -->
+        <div id="popup" class="popup"></div>
+  
+        <!-- Legend -->
+        <div class="legend">
+          <strong>Legend</strong>
+          <p style="color: #626082">● Main Roads</p>
+          <p style="color: #66cc66">● Cities</p>
+        </div>
+  
+        <div id="svg-container"></div>
+  
+        <div class ="year">
+          <strong>Current year of the map</strong>
+          <p style="color: black;">Year 2100</p>
+        </div>
+  
+  
+  
+        <div class="dropdown">
+          <button class="dropbtn"> <strong> Year Selection </strong> </button>
+          <div class="dropdown-content">
+            <a style="color:#000000" href="index.html">Year 2025 </a>
+            <a style="color:#000000" href="map2050.html">Year 2050 </a>
+            <a style="color:#000000"href="map2100.html">Year 2100 </a>
+            
+           
+          </div> 
+        </div>
+      </div>
 
 
     </div>
-
-
-    <div class="dropdown">
-      <button class="dropbtn"> <strong> Year Selection </strong> </button>
-      <div class="dropdown-content">
-        <a style="color:#000000" href="index.html">Year 2025 </a>
-        <a style="color:#000000" href="map2050.html">Year 2050 </a>
-        <a style="color:#000000"href="map2100.html">Year 2100 </a>
-        
-       
-      </div> 
-    </div>
-
-  </div>
-
-  <div class="info">
-    <strong></strong>
-
-  </div>
-
-
-    </div>
-
-    <script src="script.js"></script>
 
     
+    
+
+    <script src="script.js"></script>
   </body>
 </html>
