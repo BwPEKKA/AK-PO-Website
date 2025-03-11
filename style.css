@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family:'Proxima Nova';
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #181c25;
   margin: 0;
   padding: 0;
@@ -57,10 +57,11 @@ svg {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background: #f2f8ff;
+  background: #181c25;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color:white;
 }
 .select {
   position: absolute;
@@ -191,6 +192,18 @@ svg {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   overflow: visible;
   text-align: center;
+  font-size: 1.45em;
+  transition: 500ms ease;
+
+}
+
+.tab a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration:solid;
+  display: block;
+  border-radius: 8px;
+  transition: 500ms ease;
 }
 
 .tab .content {
@@ -213,4 +226,8 @@ svg {
 
 .tab .content img {
   width: 100%;
+}
+
+.tab:hover {
+  background-color: rgb(144, 163, 185) ;
 }
