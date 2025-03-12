@@ -23,15 +23,15 @@ body {
 
 .cont-uitleg {
     display: grid;
-    grid-template-columns: 150px 1fr; /* Fixed width for nav, rest for content */
-    grid-template-rows: 80px 1fr; /* Home takes 80px height, rest for content */
+    grid-template-columns: 150px 1fr; 
+    grid-template-rows: 80px 1fr; 
     gap: 20px;
     height: 100vh;
     width: 100%;
     padding: 20px;
 }
 
-/* Home stays at the top */
+
 .home {
     background-color: rgb(123, 154, 181);
     width: 100%;
@@ -56,12 +56,12 @@ body {
     font-size: 2em;
 }
 
-/* Nav-bar stays directly below Home */
+
 .nav-bar {
     background-color: rgb(123, 154, 181);
     border-radius: 5px;
-    width: 150px; /* Fixed width */
-    height: calc(100vh - 120px); /* Full height minus padding and home */
+    width: 150px; 
+    height: calc(100vh - 120px); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,14 +69,14 @@ body {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     position: sticky;
-    top: 100px; /* Ensures it stays below home */
+    top: 100px; 
     gap: 10px;
 }
 
-/* Main content area for uitleg-text */
+
 .uitleg-text {
     display: flex;
-    flex-direction: column; /* Stack columns vertically */
+    flex-direction: column; 
     gap: 20px;
     padding: 20px;
     overflow-y: auto;
@@ -85,7 +85,7 @@ body {
     grid-row: 1 / 3;
 }
 
-/* Individual column styling */
+
 .column {
     background-color: #f2f8ff;
     padding: 20px;
@@ -99,13 +99,13 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
-    background-color: rgba(123, 154, 181, 0.2); /* Light blue highlight */
+    background-color: rgba(123, 154, 181, 0.2); 
     padding: 8px 12px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-/* Text styling */
+
 .column-text {
     font-size: 1rem;
     color: #555;
@@ -136,18 +136,20 @@ body {
 
 .nav-tab:hover  {
     background-color: #c9dae8;
+    scale: 1.05;
 }
 
 .home:hover {
     background-color: rgb(168, 205, 223);
+    scale: 1.05;
 }
 
 .column img {
-    float: left; /* Floats the image to the left */
-    margin: 0 15px 10px 0; /* Adds space around the image */
-    max-width: 40%; /* Ensures the image doesn’t take up too much space */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 5px; /* Optional: Rounded corners for aesthetics */
+    float: left; 
+    margin: 0 15px 10px 0; 
+    max-width: 40%; 
+    height: auto;
+    border-radius: 5px; 
 }
 
 .main-title {
@@ -162,3 +164,7 @@ body {
     border-radius: 5px;
 }
 
+.column-text p {
+    text-indent: 50px;
+    letter-spacing: -0.01px;
+}

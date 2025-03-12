@@ -93,6 +93,7 @@ svg {
 .map-container {
   position: relative;
 }
+
 /* 10px od góry, -50px od prawej - musisz określić szerokość(width) */
 .map-container img {
   position: absolute;
@@ -122,7 +123,7 @@ svg {
 
 
 
-/* Style The Dropdown Button */
+
 .dropbtn {
   background-color: #f2f8ff;
   color: rgb(17, 1, 1);
@@ -135,7 +136,7 @@ svg {
 
 
 
-/* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -147,7 +148,7 @@ svg {
   transition: 600ms ease;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -157,18 +158,19 @@ svg {
   transition: 500ms ease;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {
-  background-color: rgb(219, 228, 236) 
+  background-color: rgb(219, 228, 236);
+  scale: 1.05; 
 
 }
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
   background-color: #c0d0e4;  
 }
@@ -192,7 +194,7 @@ svg {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   overflow: visible;
   text-align: center;
-  font-size: 1.45em;
+  font-size: 1.3em;
   transition: 500ms ease;
 
 }
@@ -230,4 +232,5 @@ svg {
 
 .tab:hover {
   background-color: rgb(144, 163, 185) ;
+  scale: 1.05;
 }
