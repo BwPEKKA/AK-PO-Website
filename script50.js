@@ -1,5 +1,5 @@
 
-      fetch("svg.html")
+      fetch("svg50.html")
         .then((response) => response.text())
         .then((data) => {
           const container = document.getElementById("svg-container");
@@ -69,7 +69,7 @@
               popup.innerHTML = `
                 <h3>${data.title}</h3>
                 <p>${data.text}</p>
-                <img src="${data.image}" alt="${data.title}" style="width:100%; border-radius:8px;">
+                
               `;
               popup.style.left = `${event.clientX + 1}px`;
               popup.style.top = `${event.clientY + 1}px`;
@@ -93,12 +93,12 @@
         amsterdam: {
           title: "Amsterdam",
           text: "Capital city of the Netherlands, known for its canals and museums.",
-          image: "https://via.placeholder.com/150",
+          
         },
         haarlem: {
           title: "Haarlem",
           text: "Historic city known for its art museums and medieval architecture.",
-          image: "https://via.placeholder.com/150",
+          
         },
         denhelder: {
             title: "Den Helder",
@@ -170,7 +170,8 @@
           title: "Krommenie"
         },
         WDOP: {
-          title: "WDO-Project"
+          title: "WDO-Project",
+          text: "Hoofdbeheer bureau van het omliggende sluizen- en duinensysteem ",
         },
         
 
