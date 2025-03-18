@@ -69,7 +69,7 @@
               popup.innerHTML = `
                 <h3>${data.title}</h3>
                 <p>${data.text}</p>
-                <img src="${data.image}" alt="${data.title}" style="width:100%; border-radius:8px;">
+               
               `;
               popup.style.left = `${event.clientX + 1}px`;
               popup.style.top = `${event.clientY + 1}px`;
@@ -85,6 +85,33 @@
               popup.style.display = "none";
             }
           });
+          
+          let currentState = "default"
+          function changeState(newState) {
+            currentState = currentState === newState ? "default" : newState;
+            render();
+            
+          }
+
+          document.getElementById("riversbtn").addEventListener("click", () => changeState("rivers"));
+          document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
+
+          function render() {
+            const rivers = document.getElementById("rivers")
+            const cities = document.getElementById("cities")
+  
+            if (currentState === "default") {
+              rivers.style.display = "flex"
+              cities.style.display = "flex"
+            }
+            else if (currentState === "rivers") {
+              rivers.style.display = "none"
+            }
+            else if (currentState === "cities") {
+              cities.style.display = "none"
+            }
+          }
+
         })
         .catch((error) => console.error("Error loading SVG:", error));
 
@@ -93,12 +120,12 @@
         amsterdam: {
           title: "Amsterdam",
           text: "Capital city of the Netherlands, known for its canals and museums.",
-          image: "https://via.placeholder.com/150",
+         
         },
         haarlem: {
           title: "Haarlem",
           text: "Historic city known for its art museums and medieval architecture.",
-          image: "https://via.placeholder.com/150",
+          
         },
         denhelder: {
             title: "Den Helder",
@@ -172,6 +199,12 @@
         WDOP: {
           title: "WDO-Project"
         },
+        denburg: {
+          title: "Den Burg"
+        },
+        cocksdorp: {
+          title: "De Cocksdorp"
+        },
         
 
 
@@ -179,3 +212,11 @@
       };
 
       
+
+      
+
+
+
+
+
+

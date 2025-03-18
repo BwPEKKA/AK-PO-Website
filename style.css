@@ -234,3 +234,23 @@ svg {
   background-color: rgb(144, 163, 185) ;
   scale: 1.05;
 }
+
+.toggle {
+  position: absolute;
+  bottom: 125px;
+  left: 10px;
+  background: #181c25;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color:white;
+}
+
+button {
+  background-color: #a2b9c9;
+  padding: 5px 6px;
+  display: block;
+  border-radius: 8px;
+  transition: 500ms ease;
+
+}

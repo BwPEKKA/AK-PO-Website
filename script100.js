@@ -84,6 +84,44 @@
               popup.style.display = "none";
             }
           });
+          let currentState = "default"
+          function changeState(newState) {
+            currentState = currentState === newState ? "default" : newState;
+            render();
+            
+          }
+
+          document.getElementById("riversbtn").addEventListener("click", () => changeState("rivers"));
+          document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
+          document.getElementById("WDOPbtn").addEventListener("click", () => changeState("WDOP"));
+          document.getElementById("ECObtn").addEventListener("click", () => changeState("ECO"))
+
+          function render() {
+            const rivers = document.getElementById("rivers")
+            const cities = document.getElementById("cities")
+            const WDOP = document.getElementById("WDOP")
+            const ECO = document.getElementById("ECO")
+
+  
+            if (currentState === "default") {
+              rivers.style.display = "flex"
+              cities.style.display = "flex"
+              WDOP.style.display = "flex"
+              ECO.style.display = "flex"
+            }
+            else if (currentState === "rivers") {
+              rivers.style.display = "none"
+            }
+            else if (currentState === "cities") {
+              cities.style.display = "none"
+            }
+            else if (currentState === "WDOP") {
+              WDOP.style.display = "none"
+            }
+            else if (currentState === "ECO") {
+              ECO.style.display = "none"
+            }
+          }
         })
         .catch((error) => console.error("Error loading SVG:", error));
 
@@ -103,9 +141,6 @@
         julianadorp: {
             title: "Julianadorp"
         },
-        alkmaar:{
-            title: "Alkmaar"
-        },
         medemblik:{
             title: "Medemblik"
         },
@@ -117,9 +152,7 @@
         },
         middenmeer:{
             title: "Middenmeer"
-        },
-        heerhugowaard: {
-            title: "Heerhugowaard"
+        
         },
         hoorn: {
             title: "Hoorn"
@@ -173,10 +206,22 @@
           title: "WDO-Project",
           text: "Hoofdbeheer bureau van het omliggende sluizen- en duinensysteem ",
         },
-        
+        alkmaarwaard:{
+          title: "Alkmaar + Dijk en Waard"
+        },
+        ECO: {
+          title: "Gemeentes met belang voor meer groen.",
+          text: "Kijk 'Oplossingen' ->'Groen en Wateropslag'"
+        },
+        denburg: {
+          title: "Den Burg"
+        },
+        cocksdorp: {
+          title: "De Cocksdorp"
+        },
 
 
         
       };
 
-      
+            
