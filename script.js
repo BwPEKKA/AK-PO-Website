@@ -86,31 +86,64 @@
             }
           });
           
-          let currentState = "default"
+          let currentState = "default";
+          let floodLayersVisible = false; // Flood layers start hidden
+          let riversVisible = true;
+          let citiesVisible = true;
+          
           function changeState(newState) {
-            currentState = currentState === newState ? "default" : newState;
-            render();
-            
+              if (newState === "rivers") {
+                  riversVisible = !riversVisible;
+                  toggleButton("riversbtn", riversVisible);
+              } else if (newState === "cities") {
+                  citiesVisible = !citiesVisible;
+                  toggleButton("citiesbtn", citiesVisible);
+              }
+          
+              currentState = "custom"; // Prevents resetting everything to default
+              render();
           }
-
+          
+          // Attach event listeners for individual layers
           document.getElementById("riversbtn").addEventListener("click", () => changeState("rivers"));
           document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
-
+          
+          // Toggle flood layers as a group
+          document.getElementById("toggleFloodBtn").addEventListener("click", () => {
+              floodLayersVisible = !floodLayersVisible;
+              toggleButton("toggleFloodBtn", floodLayersVisible);
+              render();
+          });
+          
           function render() {
-            const rivers = document.getElementById("rivers")
-            const cities = document.getElementById("cities")
-  
-            if (currentState === "default") {
-              rivers.style.display = "flex"
-              cities.style.display = "flex"
-            }
-            else if (currentState === "rivers") {
-              rivers.style.display = "none"
-            }
-            else if (currentState === "cities") {
-              cities.style.display = "none"
-            }
+              document.getElementById("rivers").style.display = riversVisible ? "flex" : "none";
+              document.getElementById("cities").style.display = citiesVisible ? "flex" : "none";
+          
+              // Ensure flood layers visibility follows toggle state
+              document.getElementById("overstroming_weinig").style.display = floodLayersVisible ? "flex" : "none";
+              document.getElementById("overstroming5").style.display = floodLayersVisible ? "flex" : "none";
+              document.getElementById("overstroming15").style.display = floodLayersVisible ? "flex" : "none";
           }
+          
+          // Toggle button colors
+          function toggleButton(buttonId, isActive) {
+              const button = document.getElementById(buttonId);
+              if (isActive) {
+                  button.classList.add("active");
+              } else {
+                  button.classList.remove("active");
+              }
+          }
+          
+          // Ensure flood layers are hidden on page load
+          document.addEventListener("DOMContentLoaded", () => {
+              document.getElementById("overstroming_weinig").style.display = "none";
+              document.getElementById("overstroming5").style.display = "none";
+              document.getElementById("overstroming15").style.display = "none";
+          });
+          
+          
+          
 
         })
         .catch((error) => console.error("Error loading SVG:", error));

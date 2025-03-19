@@ -84,44 +84,65 @@
               popup.style.display = "none";
             }
           });
-          let currentState = "default"
-          function changeState(newState) {
-            currentState = currentState === newState ? "default" : newState;
-            render();
-            
-          }
 
+          
+          let floodLayersVisible = false; // Flood layers are off by default
+          let layers = {
+              rivers: true,
+              cities: true,
+              WDOP: false,
+              ECO: false
+          };
+          
+          // Function to toggle individual layers
+          function changeState(layer) {
+              layers[layer] = !layers[layer];
+              toggleButton(`${layer}btn`, layers[layer]);
+              render();
+          }
+          
+          // Attach event listeners for individual layers
           document.getElementById("riversbtn").addEventListener("click", () => changeState("rivers"));
           document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
           document.getElementById("WDOPbtn").addEventListener("click", () => changeState("WDOP"));
-          document.getElementById("ECObtn").addEventListener("click", () => changeState("ECO"))
-
+          document.getElementById("ECObtn").addEventListener("click", () => changeState("ECO"));
+          
+          // Attach event listener for flood layers
+          document.getElementById("toggleFloodBtn").addEventListener("click", () => {
+              floodLayersVisible = !floodLayersVisible;
+              toggleButton("toggleFloodBtn", floodLayersVisible);
+              render();
+          });
+          
+          // Function to update layer visibility
           function render() {
-            const rivers = document.getElementById("rivers")
-            const cities = document.getElementById("cities")
-            const WDOP = document.getElementById("WDOP")
-            const ECO = document.getElementById("ECO")
-
-  
-            if (currentState === "default") {
-              rivers.style.display = "flex"
-              cities.style.display = "flex"
-              WDOP.style.display = "flex"
-              ECO.style.display = "flex"
-            }
-            else if (currentState === "rivers") {
-              rivers.style.display = "none"
-            }
-            else if (currentState === "cities") {
-              cities.style.display = "none"
-            }
-            else if (currentState === "WDOP") {
-              WDOP.style.display = "none"
-            }
-            else if (currentState === "ECO") {
-              ECO.style.display = "none"
-            }
+              Object.keys(layers).forEach(layer => {
+                  document.getElementById(layer).style.display = layers[layer] ? "flex" : "none";
+              });
+          
+              // Toggle flood layers as a group
+              document.getElementById("overstroming_weinig").style.display = floodLayersVisible ? "flex" : "none";
+              document.getElementById("overstroming5").style.display = floodLayersVisible ? "flex" : "none";
+              document.getElementById("overstroming15").style.display = floodLayersVisible ? "flex" : "none";
           }
+          
+          // Toggle button colors
+          function toggleButton(buttonId, isActive) {
+              const button = document.getElementById(buttonId);
+              if (isActive) {
+                  button.classList.add("active");
+              } else {
+                  button.classList.remove("active");
+              }
+          }
+          
+          // Ensure flood layers are hidden on page load
+          document.addEventListener("DOMContentLoaded", () => {
+              document.getElementById("overstroming_weinig").style.display = "none";
+              document.getElementById("overstroming5").style.display = "none";
+              document.getElementById("overstroming15").style.display = "none";
+          });
+          
         })
         .catch((error) => console.error("Error loading SVG:", error));
 

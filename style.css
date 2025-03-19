@@ -76,65 +76,35 @@ svg {
 
 .year {
     position: absolute;
+    font-size: 17px;
     top: 10px;
     left: 10px;
     background: #f2f8ff;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 120px;
   }
-
-
-
-.map-container img {
-  position: absolute;
-}
-
-.map-container {
-  position: relative;
-}
-
-/* 10px od góry, -50px od prawej - musisz określić szerokość(width) */
-.map-container img {
-  position: absolute;
-  width: 400px;
-  top: 10px;
-  right: -50px;
-}
-
-/* zdjęcie na środku */
-.map-container img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 
 .dropdown {
   position:absolute;
-  left: 10px;
-  top: 110px;
+  left: 135px;
+  top: 10px;
   background-color: #f2f8ff;
   width: 8%;
   border-radius: 8px;
 }  
 
 
-
-
 .dropbtn {
   background-color: #f2f8ff;
-  color: rgb(17, 1, 1);
-  padding: 16px;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  height: 50px;
 }
-
-
 
 
 .dropdown-content {
@@ -237,7 +207,7 @@ svg {
 
 .toggle {
   position: absolute;
-  bottom: 125px;
+  top: 55px;
   left: 10px;
   background: #181c25;
   padding: 10px;
@@ -247,10 +217,31 @@ svg {
 }
 
 button {
+  font-size: 10px;
+  position: relative;
   background-color: #a2b9c9;
-  padding: 5px 6px;
-  display: block;
+  padding: 5px 5px;
+  display: flex;
   border-radius: 8px;
   transition: 500ms ease;
+  width: 100px;
+}
 
+button.active {
+  background-color: #4CAF50; /* Green when active */
+  color: white;
+}
+
+.floodlegend {
+  font-size: 14px;
+  position: absolute;
+  top:250px;
+  left: 10px;
+  background: #181c25;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color:white;
+  width:120px;
+  transition: 500ms ease;
 }
