@@ -90,6 +90,7 @@
           let floodLayersVisible = false; // Flood layers start hidden
           let riversVisible = true;
           let citiesVisible = true;
+          let evacVisible = true;
           
           function changeState(newState) {
               if (newState === "rivers") {
@@ -98,6 +99,9 @@
               } else if (newState === "cities") {
                   citiesVisible = !citiesVisible;
                   toggleButton("citiesbtn", citiesVisible);
+              } else if (newState === "evac") {
+                evacVisible = !evacVisible;
+                toggleButton("evacbtn", evacVisible)
               }
           
               currentState = "custom"; // Prevents resetting everything to default
@@ -107,6 +111,7 @@
           // Attach event listeners for individual layers
           document.getElementById("riversbtn").addEventListener("click", () => changeState("rivers"));
           document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
+          document.getElementById("evacbtn").addEventListener("click", () => changeState("evac"));
           
           // Toggle flood layers as a group
           document.getElementById("toggleFloodBtn").addEventListener("click", () => {
@@ -118,6 +123,7 @@
           function render() {
               document.getElementById("rivers").style.display = riversVisible ? "flex" : "none";
               document.getElementById("cities").style.display = citiesVisible ? "flex" : "none";
+              document.getElementById("evac").style.display = evacVisible ? "flex" : "none";
           
               // Ensure flood layers visibility follows toggle state
               document.getElementById("overstroming_weinig").style.display = floodLayersVisible ? "flex" : "none";

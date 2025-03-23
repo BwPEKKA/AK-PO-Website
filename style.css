@@ -245,3 +245,20 @@ button.active {
   width:120px;
   transition: 500ms ease;
 }
+
+.evacroutes {
+  padding: 5px;
+  background-color: #dae8f7;
+  display: none;
+  top:100px;
+
+}
+
+.tab:hover .evacroutes {
+  top:100px;
+  display: block;
+  border-radius: 5px;
+  transition: 500ms ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+}

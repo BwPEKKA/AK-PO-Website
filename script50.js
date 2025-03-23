@@ -106,6 +106,10 @@
           document.getElementById("citiesbtn").addEventListener("click", () => changeState("cities"));
           document.getElementById("WDOPbtn").addEventListener("click", () => changeState("WDOP"));
           document.getElementById("ECObtn").addEventListener("click", () => changeState("ECO"));
+          document.getElementById("natuurgebbtn").addEventListener("click", () => changeState("natuurgeb"));
+          document.getElementById("Weilandenbtn").addEventListener("click", () => changeState("Weilanden"));
+          document.getElementById("evacbtn").addEventListener("click", () => changeState("evac"));
+
           
           // Attach event listener for flood layers
           document.getElementById("toggleFloodBtn").addEventListener("click", () => {
@@ -241,6 +245,20 @@
         cocksdorp: {
           title: "De Cocksdorp"
         },
+        natuurgeb: {
+          title: "Nieuwe natuurgebieden"
+        },
+        NewDikes: {
+          title: "Dijken die breder/sterker gemaakt worden",
+          text: "Kijk 'Oplossingen->Super Dijken en Extra dwerg-Eilanden'"
+        },
+        Eilanden: {
+          title: "Eilanden tegen golven",
+          text: "Kijk'Oplossingen->Super Dijken en Extra dwerg-Eilanden'"
+        },
+        Weilanden: {
+          title: "Weilanden die gebruikt kunnen worden als vloedwater opslag"
+        }
 
 
         
